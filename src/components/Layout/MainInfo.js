@@ -1,4 +1,4 @@
-import classes from './MealsInfo.module.css'
+import classes from './MainInfo.module.css'
 const MealsDescription = () => {
     return ( 
         <div className={classes.info}>
