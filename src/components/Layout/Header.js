@@ -6,7 +6,7 @@ import HeaderCartButton from './HeaderCartButton'
 const Header = () => {
     return ( 
         <Fragment>
-            <header className={classes.image}>
+            <header className={classes}>
                 <h1>Restauracja</h1>
                 <HeaderCartButton /> 
             </header>
