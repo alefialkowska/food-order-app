@@ -1,13 +1,12 @@
 import './style/App.css'
 import Header from './components/Layout/Header'
-import MealsInfo from './components/Meals/MealsInfo'
+import Main from './components/Layout/Main'
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <MealsInfo />
-   
+      <Main />  
     </div>
   );
 }
