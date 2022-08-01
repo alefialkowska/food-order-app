@@ -1,0 +1,31 @@
+.single-meal {
+    font-family: 'Barlow', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    /* padding-bottom: 1rem; */
+    border-bottom: 1px solid #ccc;
+    align-items: center;
+  }
+
+  .single-meal h2 {
+    margin: 0 0 0.2rem 0;
+  }
+
+  .single-meal div {
+    margin: 0;
+  }
+
+  
+  .description {
+    font-style: italic;
+    margin: 0;
+  }
+  
+  .price {
+    font-weight: bold;
+    color: #c1350f;
+    font-size: 1.8rem;
+    
+    
+  }
