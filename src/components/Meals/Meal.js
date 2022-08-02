@@ -10,7 +10,7 @@ const Meal = ({meal}) => {
             </div>
             <p className={classes.price}>{`${meal.price.toFixed(2)}zł`}</p>
             <div>
-            <MealAddForm />
+            <MealAddForm meal={meal}/>
             </div>
         </li>
      );
