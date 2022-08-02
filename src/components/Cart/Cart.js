@@ -1,4 +1,5 @@
 import classes from './Cart.module.css'
+import CartPortal from '../UI/CartPortal'
 
 const Cart = () => {
 const cartMeals = (
@@ -9,7 +10,7 @@ const cartMeals = (
 )
 
     return ( 
-        <div>
+        <CartPortal>
             {cartMeals}
             <div className={classes.total}>
                 <span>Kwota zamówienia</span>
@@ -19,8 +20,7 @@ const cartMeals = (
                 <button className={classes['button--alt']}>zamknij</button>
                 <button className={classes.button}>zamów</button>
                 </div>
-
-        </div>
+        </CartPortal>
      );
 }
  
