@@ -9,7 +9,7 @@ const portalDiv = document.getElementById('cartPortal')
 const CartPortal= (props) => {
     return ( 
         <Fragment>
-        {ReactDOM.createPortal(<BackDrop classes={classes}/>, portalDiv)}
+        {ReactDOM.createPortal(<BackDrop hideCart={props.hideCart} classes={classes}/>, portalDiv)}
         {ReactDOM.createPortal(<CartContainer classes={classes}>{props.children}</CartContainer>, portalDiv)}
         </Fragment>
      );

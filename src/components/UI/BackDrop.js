@@ -1,7 +1,7 @@
 
 const BackDrop = props => {
     return ( 
-        <div className={props.classes.backdrop}></div>
+        <div onClick={props.hideCart} className={props.classes.backdrop}></div>
      );
 }
  

@@ -10,7 +10,7 @@ const cartMeals = (
 )
 
     return ( 
-        <CartPortal>
+        <CartPortal hideCart={props.hideCart}>
             {cartMeals}
             <div className={classes.total}>
                 <span>Kwota zamówienia</span>
