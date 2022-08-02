@@ -2,6 +2,7 @@
     max-width: 70rem;
     width: 100%;
     margin: 2rem auto;
+    padding-left: 0;
   }
   
   .meals li {
@@ -10,3 +11,8 @@
     padding: 0;
   }
   
+  @media(max-width: 900px) {
+    .meals {
+     width: 90%;
+    }
+  }

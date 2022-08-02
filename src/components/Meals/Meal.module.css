@@ -6,6 +6,12 @@
     border-bottom: 1px solid #ccc;
     align-items: center;
   }
+  .single-meal section {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+  }
 
   .single-meal h2 {
     margin: 0 0 0.2rem 0;
@@ -13,10 +19,9 @@
   }
 
   .single-meal div {
-    margin: 0;
+    margin: auto 0;
   }
 
-  
   .description {
     font-style: italic;
     margin: 0;
@@ -26,6 +31,24 @@
     font-weight: bold;
     color: #c1350f;
     font-size: 1.8rem;
-    
-    
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  @media(max-width: 900px) {
+    .single-meal {
+      flex-wrap: wrap;
+      flex-direction: column;
+      margin-top: 0;
+     
+    }
+    .single-meal section {
+      flex-direction: column;
+      width: 100%;
+      align-self: center;
+      text-align: center;
+    }
+    .single-meal h2 {
+      margin-top: 2rem;
+    }
   }
