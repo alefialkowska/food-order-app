@@ -1,8 +1,9 @@
-import {Fragment, useState} from 'react'
-import './style/App.css'
-import Header from './components/Layout/Header'
-import Main from './components/Layout/Main'
-import Cart from './components/Cart/Cart'
+import {useState} from 'react';
+import './style/App.css';
+import CartProvider from './components/store/CartProvider';
+import Header from './components/Layout/Header';
+import Main from './components/Layout/Main';
+import Cart from './components/Cart/Cart';
 
 function App() {
 
@@ -12,11 +13,11 @@ function App() {
   const hideCart = () => setCartIsVisible(false);
 
   return (
-    <Fragment>
+    <CartProvider>
       <Header showCart={showCart}/>
       <Main /> 
       {cartIsVisible && <Cart hideCart={hideCart}/>}
-    </Fragment>
+    </CartProvider>
   );
 }
 
