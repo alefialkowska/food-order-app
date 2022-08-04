@@ -12,7 +12,9 @@ const isCartEmpty = context.items.length < 1;
 const handleAddItem = item => {
     context.addItem({...item, amount: 1})
 };
-const handleRemoveItem = id => {};
+const handleRemoveItem = id => {
+    context.removeItem(id)
+};
 
 const cartMeals = (
     <ul className={classes['cart-items']}>
