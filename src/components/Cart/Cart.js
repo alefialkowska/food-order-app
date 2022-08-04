@@ -9,7 +9,9 @@ const Cart = props => {
 const context = useContext(CartContext);
 const totalAmount = `${context.totalAmount.toFixed(2)}zł`;
 const isCartEmpty = context.items.length < 1;
-const handleAddItem = item => {};
+const handleAddItem = item => {
+    context.addItem({...item, amount: 1})
+};
 const handleRemoveItem = id => {};
 
 const cartMeals = (
