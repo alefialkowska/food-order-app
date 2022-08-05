@@ -13,7 +13,7 @@ const MealAddForm = ({meal}) => {
     const handleSubmitForm = e => {
         e.preventDefault();
         const selectedAmount = formState
-        if (selectedAmount.trim().length === 0 || selectedAmount < 1)
+        if ( selectedAmount < 1 || selectedAmount.trim().length === 0)
         return;
         context.addItem({
             id: meal.id,
