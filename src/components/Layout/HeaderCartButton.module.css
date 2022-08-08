@@ -41,7 +41,8 @@
   }
   
   .bump {
-    animation: bump 300ms ease-out;
+    animation: bump 500ms ease-out, color 500ms;
+    /* animation: color 300ms; */
   }
   
   @keyframes bump {
@@ -55,9 +56,14 @@
       transform: scale(1.1);
     }
     50% {
-      transform: scale(1.15);
+      transform: scale(1.25);
     }
     100% {
       transform: scale(1);
     }
+  }
+
+  @keyframes color {
+    from {background-color: #d9b6a8;}
+    to {background-color: #ad6549;}
   }
