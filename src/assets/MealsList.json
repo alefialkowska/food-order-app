@@ -1,0 +1,34 @@
+{
+"meals": [
+    {
+       "id":"m-1",
+       "name":"Spaghetti Bolognese",
+       "description":"Makaron z sosem pomidorowym, mieloną wołowiną i parmezanem",
+       "price": 39.99
+    },
+    {
+       "id":"m-2",
+       "name":"Zupa na grzance",
+       "description":"Zupa na bazie pomidorów i sezonowych warzyw z serową grzanką zanurzoną wewnątrz",
+       "price": 22.99
+    },
+    {
+       "id":"m-3",
+       "name":"Classic Burger",
+       "description":"Klasyczny amerykański burger z mięsem wołowym, piklami i serem     Cheddar",
+       "price": 29.99
+    },
+    {
+       "id":"m-4",
+       "name":"Sałatka Cezar",
+       "description":"Sałatka z grillowanym kurczakiem i suszonymi pomidorawmi i dressingiem czosnkowym",
+       "price": 18.99
+    },
+    {
+       "id":"m-5",
+       "name":"Frytki z batatów",
+       "description":"Frytki ze słodkich ziemniaków, podawane z sosem Chipotle",
+       "price": 18.99
+    }
+ ]
+}

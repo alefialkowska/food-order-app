@@ -1,0 +1,52 @@
+.cart-items {
+    font-family: 'Barlow', sans-serif;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 60vh;
+    overflow: scroll;
+  }
+  
+  .total {
+    font-family: 'Barlow', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+  
+  .actions {
+    text-align: right;
+  }
+  
+  .actions button {
+    font-family: 'Barlow', sans-serif;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #794733;
+    padding: 0.5rem 2rem;
+    border-radius: 25px;
+    margin-left: 1rem;
+    transition: all 0.2s ease;
+    box-shadow: 3px 3px 5px 0px rgba(14, 13, 13, 0.7);
+  }
+  
+  .actions button:hover,
+  .actions button:active {
+    background-color: #593526;
+    border-color: #593526;
+    color: white;
+    transform: translateY(2px);
+    box-shadow: 0 0 2px rgb(14, 13, 13, 0.7);
+  }
+  
+  .actions .button--alt {
+    color: #794733;
+  }
+  
+  .actions .button {
+    background-color: #794733;
+    color: white;
+  }
