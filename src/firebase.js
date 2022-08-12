@@ -1,5 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { getDatabase } from "firebase/database";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -13,7 +14,7 @@ const firebaseConfig = {
   storageBucket: "food-order-app-data-b6ee7.appspot.com",
   messagingSenderId: "699107932791",
   appId: "1:699107932791:web:157f62c2e2f194e373e472",
-  measurementId: "G-PHDF5TKRSC"
+  measurementId: "G-PHDF5TKRSC",
 };
 
 // Initialize Firebase
