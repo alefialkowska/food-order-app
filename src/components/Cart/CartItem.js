@@ -6,7 +6,7 @@ const CartItem = ({item, handleRemoveItem, handleAddItem}) => {
 
     return ( 
         <li className={classes['cart-item']}>
-      <div>
+      <div>hghmg
         <h2>{item.name}</h2>
         <div className={classes.summary}>
           <span className={classes.price}>{itemPrice}</span>
