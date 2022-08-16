@@ -21,6 +21,9 @@ const Cart = props => {
     const handleOrderButton = () => {
         setIsFormActive(true)
     };
+    const handleClosingForm = () => {
+        setIsFormActive(false)
+    }
 
     const cartMeals = (
         <ul className={classes['cart-items']}>
@@ -33,7 +36,7 @@ const Cart = props => {
             ))}
         </ul>
     )
-    
+
     const actions = (
     <div className={classes.actions}>
     <button onClick={props.hideCart} className={classes['button--alt']}>zamknij</button>
@@ -48,7 +51,7 @@ const Cart = props => {
                 <span>Kwota zamówienia</span>
                 <span>{totalAmount}</span>
             </div>
-            {isFormActive && <Checkout/>}
+            {isFormActive && <Checkout onCloseForm={handleClosingForm}/>}
             {!isFormActive && actions}
             
         </CartPortal>
