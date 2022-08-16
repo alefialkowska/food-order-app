@@ -80,10 +80,13 @@ const Checkout = props => {
             phoneNumberReset();
         }   
     }
+
+
     return ( 
         <form onSubmit={handleFormSubmit} className={classes.form}>
             <Input 
             class={classes.control} 
+            errorClass={classes.invalid}
             id='name' 
             type='text' 
             text='Imię i nazwisko' 
@@ -92,10 +95,11 @@ const Checkout = props => {
             onBlur={nameInputBlur} 
             showError= {showNameInputError}
             errorText= 'Podaj poprawne imię i nazwisko!'
-            errorClassName= 'error-text'
+            errorTextClassName= {classes['error-text']}
             />
             <Input 
             class={classes.control} 
+            errorClass={classes.invalid}
             id='street' 
             type='text' 
             text='Ulica'
@@ -104,10 +108,11 @@ const Checkout = props => {
             onBlur={streetInputBlur} 
             showError= {showStreetInputError}
             errorText= 'Podaj poprawne miasto!'
-            errorClassName= 'error-text'
+            errorTextClassName= 'error-text'
             />
             <Input 
             class={classes.control} 
+            errorClass={classes.invalid} 
             id='number' 
             type='text' 
             text='Numer domu/mieszkania'
@@ -116,10 +121,11 @@ const Checkout = props => {
             onBlur={numberInputBlur} 
             showError= {showNumberInputError}
             errorText= 'Podaj poprawny numer domu/mieszkania!'
-            errorClassName= 'error-text'
+            errorTextClassName= 'error-text'
             />
             <Input 
             class={classes.control} 
+            errorClass={classes.invalid} 
             id='city' 
             type='text' 
             text='Miasto'
@@ -128,10 +134,11 @@ const Checkout = props => {
             onBlur={cityInputBlur} 
             showError= {showCityInputError}
             errorText= 'Podaj poprawne miasto!'
-            errorClassName= 'error-text'
+            errorTextClassName= 'error-text'
             />
             <Input 
             class={classes.control} 
+            errorClass={classes.invalid} 
             id='postalcode' 
             type='text' 
             text='Kod pocztowy'
@@ -140,10 +147,11 @@ const Checkout = props => {
             onBlur={postalCodeInputBlur} 
             showError= {showPostalCodeInputError}
             errorText= 'Podaj poprawny kod pocztowy!'
-            errorClassName= 'error-text'
+            errorTextClassName= 'error-text'
             />
             <Input 
             class={classes.control} 
+            errorClass={classes.invalid} 
             id='phoneNumber' 
             type='text' 
             text='Numer telefonu'
@@ -152,7 +160,7 @@ const Checkout = props => {
             onBlur={phoneNumberInputBlur} 
             showError= {showPhoneNumberInputError}
             errorText= 'Podaj poprawny numer telefonu!'
-            errorClassName= 'error-text'
+            errorTextClassName= 'error-text'
             />
             <div className={classes.actions}>
             <button onClick={props.onCloseForm} className={classes.close}>Anuluj</button>

@@ -38,8 +38,7 @@
     border: 2px solid #794733;
     padding: 0.5rem 2rem;
     border-radius: 25px;
-    margin-left: 1rem;
-    margin-bottom: 1rem;
+    margin: 0.5rem;
     transition: all 0.2s ease;
     box-shadow: 3px 3px 5px 0px rgba(14, 13, 13, 0.7);
   }
@@ -69,4 +68,8 @@
   .invalid input {
     border-color: #aa0b20;
     background-color: #ffeff1;
+  }
+
+  .error-text {
+    color: #b40e0e;
   }
