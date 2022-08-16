@@ -36,6 +36,7 @@ const cartMeals = (
                 <span>Kwota zamówienia</span>
                 <span>{totalAmount}</span>
             </div>
+            <Checkout/>
             <div className={classes.actions}>
                 <button onClick={props.hideCart} className={classes['button--alt']}>zamknij</button>
                 {!isCartEmpty && <button className={classes.button}>zamów</button>}

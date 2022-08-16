@@ -1,29 +1,17 @@
 import classes from './Checkout.module.css'
+import Input from '../UI/Input'
 const Checkout = () => {
     return ( 
         <form action="">
-            <div className={classes.control}>
-            <label htmlFor='name'>Imię i Nazwisko</label>
-            <input type="text" id='name' />
-            </div>
+            <Input class={classes.control} id='name' type='text' text='Imię i nazwisko'/>
+            <Input class={classes.control} id='street' type='text' text='Ulica'/>
+            <Input class={classes.control} id='number' type='text' text='Numer domu/mieszkania'/>
+            <Input class={classes.control} id='city' type='text' text='Miasto'/>
+            <Input class={classes.control} id='postalcode' type='text' text='Kod pocztowy<'/>
             <div>
-                <label htmlFor="street">Ulica</label>
-                <input type="text" id='street' />
-            </div>
-            <div>
-                <label htmlFor="number">Numer domu/mieszkania</label>
-                <input type="number" id='number' />
-            </div>
-            <div>
-                <label htmlFor="city">Miasto</label>
-                <input type="text" id='city' />
-            </div>
-            <div>
-                <label htmlFor="postalcode">Kod pocztowy</label>
-                <input type="text" id='postalcode' />
-            </div>postalcode
-            
             <button>Zatwierdź</button>
+            <button>Anuluj</button>
+            </div>
         </form>
      );
 }
