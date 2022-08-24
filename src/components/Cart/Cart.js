@@ -1,9 +1,7 @@
-import { useContext } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { showCartActions } from '../store/showCartSlice';
 import classes from './Cart.module.css';
 import CartPortal from '../UI/CartPortal';
-import CartContext from '../store/CartContext';
 import CartItem from './CartItem';
 import Checkout from './Checkout';
 
@@ -11,31 +9,24 @@ const Cart = () => {
 
     const dispatch = useDispatch();
     const showCartState = useSelector(state => state.ui.showCart);
+    const items = useSelector(state => state.cartContent.items);
+    const totalPrice = useSelector(state => state.cartContent.totalPrice)
     const handleCartVisibility = () => {
         dispatch(showCartActions.toggleVisibility(showCartState))
-    };
-    const context = useContext(CartContext);
-    const totalAmount = `${context.totalAmount.toFixed(2)}zł`;
-    const isCartEmpty = context.items.length < 1;
-    const handleAddItem = item => {
-        context.addItem({...item, amount: 1})
-    };
-    const handleRemoveItem = id => {
-        context.removeItem(id)
     };
     const handleOrderButton = () => {
         dispatch(showCartActions.toggleVisibility(showCartState)) 
     };
+    const isCartEmpty = items.length < 1;
 
 
     const cartMeals = (
         <ul className={classes['cart-items']}>
-            {context.items.map( item => (
+            {items.map( item => (
                 <CartItem 
                 key={item.id} 
                 item={item} 
-                handleRemoveItem={handleRemoveItem.bind(null, item.id)} 
-                handleAddItem={handleAddItem.bind(null, item)}/>
+                />
             ))}
         </ul>
     )
@@ -52,7 +43,7 @@ const Cart = () => {
             {cartMeals}
             <div className={classes.total}>
                 <span>Kwota zamówienia</span>
-                <span>{totalAmount}</span>
+                <span>{totalPrice}</span>
             </div>
             {showCartState && <Checkout onCloseForm={handleCartVisibility}/>}
             {!showCartState && actions}
