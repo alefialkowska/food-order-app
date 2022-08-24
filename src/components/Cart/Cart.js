@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react';
-import { useDispatch, useSelector } from '@reduxjs/toolkit';
+import { useDispatch, useSelector } from 'react-redux';
 import { showCartActions } from '../store/showCartSlice';
 import classes from './Cart.module.css';
 import CartPortal from '../UI/CartPortal';

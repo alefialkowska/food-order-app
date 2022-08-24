@@ -1,5 +1,4 @@
-import {useState} from 'react';
-import { useSelector } from '@reduxjs/toolkit';
+import { useSelector } from 'react-redux';
 import './style/App.css';
 import CartProvider from './components/store/CartProvider';
 import Header from './components/Layout/Header';
