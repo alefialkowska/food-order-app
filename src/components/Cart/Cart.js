@@ -11,6 +11,7 @@ const Cart = () => {
     const showCartState = useSelector(state => state.ui.showCart);
     const items = useSelector(state => state.cartContent.items);
     const totalPrice = useSelector(state => state.cartContent.totalPrice)
+    
     const handleCartVisibility = () => {
         dispatch(showCartActions.toggleVisibility(showCartState))
     };
@@ -18,7 +19,6 @@ const Cart = () => {
         dispatch(showCartActions.toggleVisibility(showCartState)) 
     };
     const isCartEmpty = items.length < 1;
-
 
     const cartMeals = (
         <ul className={classes['cart-items']}>
@@ -43,7 +43,7 @@ const Cart = () => {
             {cartMeals}
             <div className={classes.total}>
                 <span>Kwota zamówienia</span>
-                <span>{totalPrice}</span>
+                <span>{totalPrice.toFixed(2)}</span>
             </div>
             {showCartState && <Checkout onCloseForm={handleCartVisibility}/>}
             {!showCartState && actions}
