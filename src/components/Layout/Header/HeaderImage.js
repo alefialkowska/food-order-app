@@ -1,5 +1,5 @@
 import classes from './HeaderImage.module.css'
-import mealsImage from '../../assets/header.jpg'
+import mealsImage from '../../../assets/header.jpg'
 const HeaderImage = () => {
     return ( 
         <div className={classes['header-image']}>

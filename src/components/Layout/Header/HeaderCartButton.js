@@ -1,8 +1,8 @@
 import { Fragment, useContext, useState, useEffect} from 'react';
-import { showCartActions } from '../store/showCartSlice';
+import { showCartActions } from '../../store/showCartSlice'
 import { useDispatch, useSelector } from 'react-redux';
-import CartContext from '../store/CartContext';
-import CartIcon from '../Cart/CartIcon';
+import CartContext from '../../store/CartContext';
+import CartIcon from '../../Cart/CartIcon';
 import classes from './HeaderCartButton.module.css';
 
 const HeaderCartButton = () => {

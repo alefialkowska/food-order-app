@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux';
 import './style/App.css';
 import CartProvider from './components/store/CartProvider';
-import Header from './components/Layout/Header';
-import Main from './components/Layout/Main';
+import Header from './components/Layout/Header/Header';
+import Main from './components/Layout/Main/Main';
 import Cart from './components/Cart/Cart';
 
 function App() {
