@@ -7,8 +7,7 @@ import { cartContentActions } from '../store/cartContentSlice';
 const MealAddForm = ({meal}) => {
 
     const dispatch = useDispatch();
-    const [formState, setFormState] = useState('')
-
+    const [formState, setFormState] = useState(0);
 
     const handleFormSumbit = e => {
         e.preventDefault();
@@ -17,7 +16,7 @@ const MealAddForm = ({meal}) => {
             id: meal.id,
             price: meal.price, 
             name: meal.name,
-            quantity: formState,
+            quantity: Number(formState),
         }))
         setFormState(0)
     };
