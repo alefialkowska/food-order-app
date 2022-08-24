@@ -1,33 +1,32 @@
 import classes from './MealAddForm.module.css'
-import { useState, useContext } from 'react';
-import CartContext from '../store/CartContext';
+import { useState} from 'react';
+import { useDispatch } from 'react-redux';
+import { cartContentActions } from '../store/cartContentSlice';
+
 
 const MealAddForm = ({meal}) => {
 
-    const context = useContext(CartContext);
-  const [formState, setFormState] = useState('')
+    const dispatch = useDispatch();
+    const [formState, setFormState] = useState('')
 
-  const handleAmountChange = e => {
-    setFormState(e.target.value)
-  }
-    const handleSubmitForm = e => {
+
+    const handleFormSumbit = e => {
         e.preventDefault();
-        const selectedAmount = formState
-        if ( selectedAmount < 1 || selectedAmount.trim().length === 0)
-        return;
-        context.addItem({
+        if (formState < 0) return;
+        dispatch(cartContentActions.addItem({
             id: meal.id,
-            price: meal.price,
+            price: meal.price, 
             name: meal.name,
-            amount: +selectedAmount,
-        });
-        setFormState(0);
-
-
-    } 
-
+            quantity: formState,
+        }))
+        setFormState(0)
+    };
+    const handleAmountChange = e => {
+        setFormState(e.target.value)
+    };
+    
     return (
-        <form className={classes.form} onSubmit={handleSubmitForm}>
+        <form className={classes.form} onSubmit={handleFormSumbit}>
             <label htmlFor={meal.id} className={classes.label}>ilość</label>
             <input value={formState} onChange={handleAmountChange} type="number" min={0} max={5} id={meal.id} className={classes.input}/>
             <button type='submit' className={classes.button}>+ dodaj</button>
