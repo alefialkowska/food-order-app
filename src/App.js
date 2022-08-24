@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import { useSelector } from '@reduxjs/toolkit';
 import './style/App.css';
 import CartProvider from './components/store/CartProvider';
 import Header from './components/Layout/Header';
@@ -7,16 +8,13 @@ import Cart from './components/Cart/Cart';
 
 function App() {
 
-  const [cartIsVisible, setCartIsVisible] = useState(false);
-
-  const showCart = () => setCartIsVisible(true);
-  const hideCart = () => setCartIsVisible(false);
+  const showCartState = useSelector(state => state.ui.showCart);
 
   return (
     <CartProvider>
-      <Header showCart={showCart}/>
+      <Header/>
       <Main /> 
-      {cartIsVisible && <Cart hideCart={hideCart}/>}
+      {showCartState && <Cart/>}
     </CartProvider>
   );
 }

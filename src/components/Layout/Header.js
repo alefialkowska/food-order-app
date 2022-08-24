@@ -3,12 +3,12 @@ import HeaderImage from './HeaderImage'
 import classes from './Header.module.css'
 import HeaderCartButton from './HeaderCartButton'
 
-const Header = ({showCart}) => {
+const Header = () => {
     return ( 
         <Fragment>
             <header className={classes}>
                 <h1>Restauracja</h1>
-                <HeaderCartButton showCart={showCart} /> 
+                <HeaderCartButton /> 
             </header>
             <HeaderImage />  
         </Fragment>

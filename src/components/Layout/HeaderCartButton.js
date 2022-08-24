@@ -1,9 +1,17 @@
 import { Fragment, useContext, useState, useEffect} from 'react';
+import { showCartActions } from '../store/showCartSlice';
+import { useSelector, useDispatch } from '@reduxjs/toolkit'
 import CartContext from '../store/CartContext';
 import CartIcon from '../Cart/CartIcon';
 import classes from './HeaderCartButton.module.css';
 
-const HeaderCartButton = ({showCart}) => {
+const HeaderCartButton = () => {
+    const dispatch = useDispatch();
+    const showCartState = useSelector(state => state.ui.showCart);
+    const handleCartVisibility = () => {
+        dispatch(showCartActions.toggleVisibility(showCartState))
+    };
+
 
     const [bumpActive, setBumpActive] = useState(false);
 
@@ -30,7 +38,7 @@ const HeaderCartButton = ({showCart}) => {
 
     return (
         <Fragment>
-        <button onClick={showCart} className={classes.button}>
+        <button onClick={handleCartVisibility} className={classes.button}>
             <div className={classes.icon}>
                 <CartIcon classes={classes}/>
             </div>
